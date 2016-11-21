@@ -6,15 +6,11 @@ curl-android-ios
 curl-7.51.0
 OpenSSL-1.0.2j
 
-The goal of this project is to provide a pre-compiled version of libcurl to be
-used in Android and iOS.
+This forked project has the applied pull request that fixes build on android and updated Curl & OpenSSL commits. The pre-built binaries were not updated for iOS, and the binaries for Android have not been tested.
 
-It uses cURL from the upstream repository and it's updated frequently.
+The intent of this fork was to update the build scripts to test newer versions of the curl and openssl libs for my project
 
-For Android, it also uses OpenSSL from its upstream repository.
-
-If you want to build the library, scripts are provided for both platforms.
-Test projects are also provided for both iOS and Android.
+Please see https://github.com/gcesarmza/curl-android-ios for more details!
 
 # Building
 * Clone this repo `git clone https://github.com/jsuppe/curl-android-ios.git`
