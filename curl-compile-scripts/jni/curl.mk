@@ -12,28 +12,17 @@ CURL_COMMON_CFLAGS += \
   -Wno-system-headers -Wno-typedef-redefinition -Wno-unused-variable \
   -Wno-unused-function
 CURL_CSOURCES := \
-  amigaos.c asyn-ares.c asyn-thread.c base64.c conncache.c \
-  connect.c content_encoding.c cookie.c curl_addrinfo.c curl_fnmatch.c \
-  curl_gethostname.c curl_gssapi.c curl_memrchr.c curl_multibyte.c \
-  curl_ntlm_core.c curl_ntlm_wb.c curl_rtmp.c \
-  curl_sasl.c curl_sspi.c curl_threads.c dict.c dotdot.c \
-  easy.c escape.c file.c fileinfo.c formdata.c ftp.c ftplistparser.c \
-  getenv.c getinfo.c gopher.c hash.c hmac.c hostasyn.c hostcheck.c \
-  hostip4.c hostip6.c hostip.c hostsyn.c http2.c http.c http_chunks.c \
-  http_digest.c http_negotiate.c http_ntlm.c http_proxy.c \
-  idn_win32.c if2ip.c imap.c inet_ntop.c inet_pton.c krb5.c ldap.c llist.c \
-  md4.c md5.c memdebug.c mprintf.c multi.c netrc.c non-ascii.c nonblock.c \
-  nwlib.c nwos.c openldap.c parsedate.c pingpong.c pipeline.c pop3.c \
-  progress.c rawstr.c rtsp.c security.c select.c sendf.c share.c slist.c \
-  smtp.c socks.c socks_gssapi.c socks_sspi.c speedcheck.c splay.c ssh.c \
-  strdup.c strequal.c strerror.c strtok.c strtoofft.c telnet.c tftp.c \
-  timeval.c transfer.c url.c version.c warnless.c wildcard.c x509asn1.c \
-  smb.c curl_endian.c curl_des.c \
-  vtls/axtls.c vtls/darwinssl.c vtls/schannel.c vtls/cyassl.c \
-  vtls/gskit.c vtls/gtls.c vtls/nss.c vtls/openssl.c vtls/polarssl.c \
-  vtls/polarssl_threadlock.c vtls/vtls.c \
-  vauth/vauth.c vauth/cleartext.c vauth/cram.c vauth/digest.c vauth/digest_sspi.c \
-  vauth/oauth2.c vauth/ntlm.c vauth/ntlm_sspi.c vauth/digest_sspi.c 
+amigaos.c           curl_fnmatch.c      dict.c           gopher.c     http_chunks.c     ldap.c       nwos.c       share.c         strdup.c        warnless.c \
+asyn-ares.c         curl_gethostname.c  dotdot.c         hash.c       http_digest.c     llist.c      openldap.c   slist.c         strerror.c      wildcard.c \
+asyn-thread.c       curl_gssapi.c       easy.c           hmac.c       http_negotiate.c  md4.c        parsedate.c  smb.c           strtok.c        x509asn1.c \
+base64.c            curl_memrchr.c      escape.c         hostasyn.c   http_ntlm.c       md5.c        pingpong.c   smtp.c          strtoofft.c \
+conncache.c         curl_multibyte.c    file.c           hostcheck.c  http_proxy.c      memdebug.c   pipeline.c   socks.c         system_win32.c \
+connect.c           curl_ntlm_core.c    fileinfo.c       hostip4.c    idn_win32.c       mprintf.c    pop3.c       socks_gssapi.c  telnet.c \
+content_encoding.c  curl_ntlm_wb.c      formdata.c       hostip6.c    if2ip.c           multi.c      progress.c   socks_sspi.c    tftp.c \
+cookie.c            curl_rtmp.c         ftp.c            hostip.c     imap.c            netrc.c      rtsp.c       speedcheck.c    timeval.c \
+curl_addrinfo.c     curl_sasl.c         ftplistparser.c  hostsyn.c    inet_ntop.c       non-ascii.c  security.c   splay.c         transfer.c \
+curl_des.c          curl_sspi.c         getenv.c         http2.c      inet_pton.c       nonblock.c   select.c     ssh.c           url.c \
+curl_endian.c       curl_threads.c      getinfo.c        http.c       krb5.c            nwlib.c      sendf.c      strcase.c       version.c
 CURL_LOCAL_SRC_FILES := $(addprefix ../../curl/lib/,$(CURL_CSOURCES))
 CURL_LOCAL_C_INCLUDES += \
   $(LOCAL_PATH)/../../curl/include \
